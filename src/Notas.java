@@ -1,11 +1,11 @@
 /**
- * Clase que permite calcular y gestionar las notas de los alumnos.
+ * Clase que permite calcular las notas de los alumnos.
  * Calcula la media de tres notas, comprueba si el alumno ha aprobado
  * y obtiene su calificación.
  * La nota final se calcula restando 0.1 puntos por cada falta
  * de asistencia a la nota media, sin bajar de cero.
  *
- * @author Tu nombre
+ * @author Alvaro Blas Magaña
  * @version 1.0
  */
 public class Notas {
@@ -14,8 +14,7 @@ public class Notas {
     public static final double NOTA_APROBADO = 5.0;
 
     /**
-     * Calcula la media aritmética de tres notas.
-     *
+     * Calcula la media de tres notas.
      * @param nota1 Primera nota.
      * @param nota2 Segunda nota.
      * @param nota3 Tercera nota.
@@ -27,7 +26,6 @@ public class Notas {
 
     /**
      * Comprueba si un alumno ha aprobado.
-     *
      * @param nota Nota del alumno.
      * @return true si la nota es igual o superior a 5,
      *         false en caso contrario.
@@ -38,12 +36,6 @@ public class Notas {
 
     /**
      * Obtiene la calificación correspondiente a una nota.
-     * Insuficiente: inferior a 5.
-     * Suficiente: desde 5 hasta menos de 6.
-     * Bien: desde 6 hasta menos de 7.
-     * Notable: desde 7 hasta menos de 9.
-     * Sobresaliente: igual o superior a 9.
-     *
      * @param nota Nota del alumno.
      * @return Calificación en formato de texto.
      */
@@ -64,10 +56,6 @@ public class Notas {
     /**
      * Calcula la nota final restando 0.1 puntos por cada falta.
      * Si el resultado es negativo, devuelve 0.
-     * Por ejemplo, notaFinal(0.5, 10) devuelve 0.0
-     * porque al restar un punto a 0.5 se obtiene -0.5
-     * y no se permiten notas finales negativas.
-     *
      * @param media Nota media del alumno.
      * @param faltas Número de faltas de asistencia.
      * @return Nota final después de aplicar la penalización.
@@ -82,7 +70,6 @@ public class Notas {
 
     /**
      * Muestra el nombre, la nota y la calificación del alumno.
-     *
      * @param nombre Nombre del alumno.
      * @param nota Nota del alumno.
      */
@@ -93,7 +80,6 @@ public class Notas {
 
     /**
      * Método principal que ejecuta las pruebas de la clase.
-     *
      * @param args Argumentos de la línea de comandos.
      */
     public static void main(String[] args) {
